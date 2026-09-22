@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動画編集講座（無料公開）| LICO</title>
+
+<style>
+:root{
+  --teal:#0d7d78; --teal-dark:#095b57; --teal-light:#e6f3f2;
+  --ink:#1c2a2a; --ink-soft:#546363; --line:#dbe4e3; --paper:#ffffff; --ground:#f6f9f9;
+  --amber:#f0b429; --amber-light:#fff3cd;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;height:100%;background:var(--ground);color:var(--ink);font-family:'Hiragino Sans','Noto Sans JP',-apple-system,sans-serif;}
+.app{display:flex;min-height:100vh;}
+.sidebar{width:280px;flex:none;background:var(--teal-dark);color:#fff;padding:24px 0;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.brand{padding:0 22px 20px;font-size:15px;font-weight:800;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.15);margin-bottom:10px;}
+.brand span{display:block;font-size:11px;font-weight:500;opacity:.7;margin-top:4px;letter-spacing:.08em;}
+.nav-item{display:flex;align-items:center;gap:12px;width:100%;background:none;border:none;color:#fff;text-align:left;padding:12px 22px;cursor:pointer;font-family:inherit;opacity:.82;}
+.nav-item:hover{background:rgba(255,255,255,.08);opacity:1;}
+.nav-item.active{background:rgba(255,255,255,.16);opacity:1;border-right:3px solid #fff;}
+.nav-num{font-size:11px;font-variant-numeric:tabular-nums;opacity:.6;flex:none;width:20px;}
+.nav-text{display:flex;flex-direction:column;}
+.nav-label{font-size:10px;letter-spacing:.1em;opacity:.65;}
+.nav-title{font-size:13.5px;font-weight:600;}
+
+.main{flex:1;min-width:0;padding:40px 48px 100px;}
+.panel-head{margin-bottom:20px;}
+.step-label{display:inline-block;background:var(--teal);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:12px;}
+.panel h2{font-size:26px;font-weight:900;margin:0 0 6px;}
+.panel .lead{color:var(--ink-soft);font-size:14.5px;margin:0;}
+
+.video-wrap{background:#000;border-radius:12px;overflow:hidden;margin:20px 0 28px;box-shadow:0 8px 30px rgba(0,0,0,.18);position:relative;padding-top:56.25%;height:0;}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+
+ol.steps{padding-left:0;list-style:none;margin:0 0 20px;counter-reset:stepnum;max-width:720px;}
+ol.steps li{counter-increment:stepnum;position:relative;padding:10px 0 10px 40px;font-size:14.5px;border-bottom:1px dashed var(--line);}
+ol.steps li:last-child{border-bottom:none;}
+ol.steps li::before{content:counter(stepnum,decimal-leading-zero);position:absolute;left:0;top:9px;width:26px;height:26px;background:var(--teal-light);color:var(--teal-dark);font-size:11.5px;font-weight:800;border-radius:6px;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;}
+
+.callout{max-width:720px;background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:18px 0;}
+.callout strong{color:var(--teal-dark);}
+.callout.warn{background:var(--amber-light);border-left-color:var(--amber);}
+.callout.warn strong{color:#8a6400;}
+
+table.settings{max-width:720px;width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:13.5px;}
+table.settings th{background:var(--teal);color:#fff;text-align:left;padding:10px 14px;font-weight:700;}
+table.settings td{padding:9px 14px;border-bottom:1px solid var(--line);}
+table.settings tr:last-child td{border-bottom:none;}
+table.settings tr:nth-child(even) td{background:#fafcfc;}
+
+.progress{max-width:720px;display:flex;justify-content:space-between;align-items:center;margin-top:36px;padding-top:20px;border-top:1px solid var(--line);}
+.progress button{background:var(--teal);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;}
+.progress button:disabled{background:var(--line);color:#9aa8a8;cursor:default;}
+.progress .pos{font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums;}
+
+@media (max-width:800px){
+  .app{flex-direction:column;}
+  .sidebar{width:100%;height:auto;position:relative;overflow-x:auto;white-space:nowrap;padding:14px 0;}
+  .brand{display:none;}
+  .nav-item{display:inline-flex;padding:8px 14px;}
+  .main{padding:24px 18px 80px;}
+}
+</style>
+
+</head>
+<body>
+<div class="app">
+  <div class="sidebar">
+    <div class="brand">動画編集講座<span>Premiere Pro コース</span></div>
+    <button class="nav-item" data-target="s1" onclick="selectStep('s1')">
+          <span class="nav-num">01</span>
+          <span class="nav-text"><span class="nav-label">STEP 1</span><span class="nav-title">フォルダの作成</span></span>
+        </button>
+<button class="nav-item" data-target="s2" onclick="selectStep('s2')">
+          <span class="nav-num">02</span>
+          <span class="nav-text"><span class="nav-label">STEP 2</span><span class="nav-title">プロジェクトの作成</span></span>
+        </button>
+<button class="nav-item" data-target="s3" onclick="selectStep('s3')">
+          <span class="nav-num">03</span>
+          <span class="nav-text"><span class="nav-label">STEP 3</span><span class="nav-title">作業環境の統一</span></span>
+        </button>
+<button class="nav-item" data-target="s32" onclick="selectStep('s32')">
+          <span class="nav-num">04</span>
+          <span class="nav-text"><span class="nav-label">STEP 3-2</span><span class="nav-title">ショートカットキーの設定</span></span>
+        </button>
+<button class="nav-item" data-target="s4" onclick="selectStep('s4')">
+          <span class="nav-num">05</span>
+          <span class="nav-text"><span class="nav-label">STEP 4</span><span class="nav-title">素材の調節・カット</span></span>
+        </button>
+<button class="nav-item" data-target="s5" onclick="selectStep('s5')">
+          <span class="nav-num">06</span>
+          <span class="nav-text"><span class="nav-label">STEP 5</span><span class="nav-title">テロップ</span></span>
+        </button>
+<button class="nav-item" data-target="ex1" onclick="selectStep('ex1')">
+          <span class="nav-num">07</span>
+          <span class="nav-text"><span class="nav-label">EXTRA</span><span class="nav-title">テロップデザイン</span></span>
+        </button>
+<button class="nav-item" data-target="ex2" onclick="selectStep('ex2')">
+          <span class="nav-num">08</span>
+          <span class="nav-text"><span class="nav-label">EXTRA</span><span class="nav-title">SE（効果音）</span></span>
+        </button>
+<button class="nav-item" data-target="ex3" onclick="selectStep('ex3')">
+          <span class="nav-num">09</span>
+          <span class="nav-text"><span class="nav-label">EXTRA</span><span class="nav-title">画像挿入など</span></span>
+        </button>
+<button class="nav-item" data-target="s6" onclick="selectStep('s6')">
+          <span class="nav-num">10</span>
+          <span class="nav-text"><span class="nav-label">STEP 6</span><span class="nav-title">BGM</span></span>
+        </button>
+<button class="nav-item" data-target="s7" onclick="selectStep('s7')">
+          <span class="nav-num">11</span>
+          <span class="nav-text"><span class="nav-label">STEP 7</span><span class="nav-title">動画の書き出し・プロマネ</span></span>
+        </button>
+  </div>
+  <div class="main">
+    
+    <div class="panel" id="panel-s1" style="display:block">
+      <div class="panel-head">
+        <span class="step-label">STEP 1</span>
+        <h2>フォルダの作成</h2>
+        <p class="lead">案件ごとに、プロジェクト・書き出し・素材をまとめます。</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1VRR8xRE_u_Qq5LLi0l9un9rzZKMtKBSB/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>デスクトップに「動画編集」フォルダを作成します。</li>
+<li>「動画編集」フォルダの中に、案件ごとのフォルダを作成します。今回は「動画編集講座」という名前にします。</li>
+<li>案件フォルダの中に「プロジェクト」「書き出し」「素材」の3つのフォルダを作成します。</li></ol>
+      
+      
+    </div>
+    
+
+    <div class="panel" id="panel-s2" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 2</span>
+        <h2>プロジェクトの作成</h2>
+        
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1mnIaKlP2zBi1kJZiTF2-h05prv1IzwVL/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>Premiere Proのアイコンをクリックして起動します。</li>
+<li>「新規プロジェクト」をクリックします。編集中のプロジェクトを続ける場合は「最近使用したもの」から選んで開きます。</li>
+<li>「プロジェクト名」を設定します（今回は「動画編集講座」）。</li>
+<li>保存先の「参照」から、STEP1で作成した「プロジェクト」フォルダを選択します。</li>
+<li>画面が開いたら、右下の「スキップ」をクリックして次へ進みます。</li></ol>
+      <div class="callout warn"><strong>注意｜プロジェクトや素材を削除しない</strong><br>Premiere ProはPC内のファイルを参照して編集します。編集中のプロジェクトや使用中の素材を削除しないよう注意してください。</div>
+      
+    </div>
+    
+
+    <div class="panel" id="panel-s3" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 3</span>
+        <h2>作業環境の統一</h2>
+        
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1mKtLEy0GgVznjpluuMN1j_ZtfXPSQApr/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>画面右上の「ワークスペース」を開きます。</li>
+<li>「学習」になっている場合は「初期設定」を選択します。</li>
+<li>必要なパネルを表示し、配置図を目安に並べます。</li>
+<li>右上の「ワークスペース」→「新規ワークスペースとして保存」を選択します。</li>
+<li>「動画編集」などの名前を付け、「OK」をクリックします。</li></ol>
+      <div class="callout info"><strong>配置が崩れたとき</strong><br>右上の「ワークスペース」から「保存したレイアウトにリセット」を選ぶと、保存した配置に戻せます。</div>
+      <table class="settings"><tr><th>エリア</th><th>表示するパネル</th></tr><tr><td>左上</td><td>プロジェクト／エフェクト</td></tr>
+<tr><td>中央上</td><td>プログラム</td></tr>
+<tr><td>右上</td><td>エフェクトコントロール／エッセンシャルグラフィックス（プロパティ）／テキスト</td></tr>
+<tr><td>左下</td><td>ツール</td></tr>
+<tr><td>中央下</td><td>タイムライン</td></tr></table>
+    </div>
+    
+
+    <div class="panel" id="panel-s32" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 3-2</span>
+        <h2>ショートカットキーの設定</h2>
+        <p class="lead">1/2 初期設定の割り当てを整理する → 2/2 動作名を検索して新しいキーを登録する</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1AY7QRVFMNXedtf920KfriHrNTFMNAYSS/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>「Premiere Pro」メニュー→「キーボードショートカット」を開きます。</li>
+<li>削除したい割り当てのキーをクリックし、右下の「×」で削除します。</li>
+<li>虫眼鏡の検索欄に動作名を入力し、該当動作の「ショートカットキー」欄にキーを入力します（入力後Enterは押しません）。</li>
+<li>「別名で保存」→名前をつけて「OK」で設定完了です。</li></ol>
+      
+      <table class="settings"><tr><th>列/検索語</th><th>設定内容</th></tr><tr><td>1列目</td><td>F1の割り当てを削除</td></tr>
+<tr><td>2列目</td><td>「削除」以外の割り当てを削除</td></tr>
+<tr><td>3列目</td><td>Tを残す。Enterキーの「次の行フィールド」も残す</td></tr>
+<tr><td>4列目</td><td>Gを残し、それ以外を削除</td></tr>
+<tr><td>5列目</td><td>VとMを残し、それ以外を削除</td></tr>
+<tr><td>バイオレット / アイリス</td><td>2 / 3</td></tr>
+<tr><td>消去 / ネスト</td><td>Q / W</td></tr>
+<tr><td>前の編集点をリップルトリミング</td><td>A</td></tr>
+<tr><td>編集点を追加</td><td>S</td></tr>
+<tr><td>次の編集点をリップルトリミング</td><td>D</td></tr>
+<tr><td>リップル削除</td><td>F</td></tr>
+<tr><td>トラック後方 / 前方選択ツール</td><td>Z / X</td></tr>
+<tr><td>右へシャトル</td><td>C</td></tr></table>
+    </div>
+    
+
+    <div class="panel" id="panel-s4" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 4</span>
+        <h2>素材の調節・カット</h2>
+        <p class="lead">今回は音声素材を中心に編集を進めます。</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1n7cYJ1XOypBttDsLttfJSmkbLqBrkwpq/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>素材をインポートし、タイムラインへ配置します（動画=V1〜／音声=A1〜）。</li>
+<li>「オーディオトラックミキサー」パネルでA1の設定欄を表示します。</li>
+<li>「ノイズリダクション／レストレーション」→「クロマノイズ除去」を追加し、「重いノイズリダクション」を選択します。</li>
+<li>Sで編集点を追加し、不要部分を選んでQで削除します。</li>
+<li>音声のカットができたら、動画素材も同様にインポート・配置・カットを行います。</li></ol>
+      <div class="callout warn"><strong>注意｜耳と波形の両方で確認</strong><br>必ず音を聴きながら、音声波形も見てカットします。波形が盛り上がっている位置で切ると「プツッ」という破裂音が入ることがあります。</div>
+      
+    </div>
+    
+
+    <div class="panel" id="panel-s5" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 5</span>
+        <h2>テロップ</h2>
+        <p class="lead">1/2 テロップ作成→背景→位置 → 2/2 デザイン→入力</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1MsKsV8E6MeaCX2-9XZI34lJQOFUcC8Kl/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>ツールパネルの「T」で動画内をクリックし、仮の文字を入力します。</li>
+<li>「プロパティ」パネルで「長方形」を追加し、テロップの黒背景を作ります。</li>
+<li>「エフェクトコントロール」の「位置」でテロップの上下位置を調整します。</li>
+<li>背景の「塗り」を黒、「不透明度」を90に設定します。</li>
+<li>テキストを選択し、フォント・サイズ・中央/下揃えを設定します。</li>
+<li>テロップが切り替わる位置でSを押して編集点を追加し、各区間のテロップを入力します。</li></ol>
+      
+      <table class="settings"><tr><th>項目</th><th>設定値</th></tr><tr><td>フォント</td><td>ヒラギノ明朝 W6</td></tr>
+<tr><td>フォントサイズ</td><td>90</td></tr>
+<tr><td>背景（長方形）の塗り</td><td>黒</td></tr>
+<tr><td>背景（長方形）の不透明度</td><td>90%</td></tr></table>
+    </div>
+    
+
+    <div class="panel" id="panel-ex1" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">EXTRA</span>
+        <h2>テロップデザイン</h2>
+        <p class="lead">プロパティパネルで文字の見た目を調整できます。</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1pMuRx6i2i4rQBlkX7IkWnTtcWNjvFJZs/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>動画上の編集したいテロップの文字を選び、全選択します（Mac: Command+A／Win: Ctrl+A）。</li>
+<li>プロパティパネルで塗り・ストローク・シャドウ・フォントサイズを調整します。</li></ol>
+      
+      <table class="settings"><tr><th>項目</th><th>変更できる内容</th></tr><tr><td>塗り</td><td>テロップの色</td></tr>
+<tr><td>ストローク</td><td>テロップの縁</td></tr>
+<tr><td>シャドウ</td><td>テロップの影や光</td></tr>
+<tr><td>フォントサイズ</td><td>テロップの大きさ</td></tr></table>
+    </div>
+    
+
+    <div class="panel" id="panel-ex2" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">EXTRA</span>
+        <h2>SE（効果音）</h2>
+        <p class="lead">講座では「効果音ラボ」からのダウンロードが紹介されています。</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1pwGQyy1kLXLe0-YpFGhZTTYmlrNiDMfD/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>使えそうな効果音をダウンロードし、1つのフォルダにまとめます。</li>
+<li>Premiere Proにインポートし、タイムライン上に配置します。</li>
+<li>「振幅と圧縮」→「ダイナミック」→「リミッター」にチェックし、-15〜-20 dB程度に設定します。</li></ol>
+      <div class="callout warn">素材を使う前に、利用規約・商用利用の可否・著作権上の問題がないかを確認してください。</div>
+      
+    </div>
+    
+
+    <div class="panel" id="panel-ex3" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">EXTRA</span>
+        <h2>画像挿入など</h2>
+        
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/15ZA9AgAPfM3dzjrB8z3YSB-faSwUjiaK/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>必要な画像をダウンロードします（利用規約・商用利用・著作権を確認）。</li>
+<li>インポートし、タイムライン上に配置します（上のトラックほど手前に表示）。</li>
+<li>「エフェクトコントロール」の「モーション」で「位置」と「スケール」を調整します。</li></ol>
+      
+      
+    </div>
+    
+
+    <div class="panel" id="panel-s6" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 6</span>
+        <h2>BGM</h2>
+        
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1WeykPweq6lZuLwgVgtrL_tSAaul43gft/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>音楽素材をダウンロードします（商用利用・著作権を確認）。</li>
+<li>音声素材の下（A2、またはA3以降）に配置します。</li>
+<li>「振幅と圧縮」→「ダイナミック」→「リミッター」にチェックし、-20〜-30 dBに設定します。</li>
+<li>動画の終わりに合わせて長さをカットし、終端をドラッグしてフェードアウトを設定します。</li></ol>
+      <div class="callout info">最後は音を聴いて、BGMが自然に小さくなり動画と一緒に終わることを確認します。</div>
+      
+    </div>
+    
+
+    <div class="panel" id="panel-s7" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">STEP 7</span>
+        <h2>動画の書き出し・プロマネ</h2>
+        <p class="lead">完成した動画を、視聴・納品できるファイルにします。</p>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://drive.google.com/file/d/1cxDREFkDWRrrNinQhyZlSug6XDVOtCaF/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <ol class="steps"><li>画面左上の「書き出し」をクリックします。</li>
+<li>ファイル名（末尾.mp4を残す）と保存先を指定します。</li>
+<li>「プリセット」で「高品質1080p HD」を選択し、右下の「書き出し」で完了です。</li>
+<li>編集データの共有を頼まれたら「ファイル」→「プロジェクトマネージャー」→保存先を「書き出し」フォルダに設定→オプション確認→OK。</li></ol>
+      <div class="callout info"><strong>重要｜生成されたフォルダごと共有</strong><br>編集に必要なデータをまとめて共有することで、依頼主が編集画面を確認したり続きを編集したりできます。</div>
+      <table class="settings"><tr><th>確認項目</th><th>講座での指定</th></tr><tr><td>ファイル名</td><td>末尾の .mp4 を残す</td></tr>
+<tr><td>保存先</td><td>動画編集 → 動画編集講座 → 書き出し</td></tr>
+<tr><td>プリセット</td><td>高品質1080p HD</td></tr></table>
+    </div>
+    
+    
+<div class="progress">
+  <button class="btn-prev" onclick="go(-1)">← 前のステップ</button>
+  <span class="pos"></span>
+  <button class="btn-next" onclick="go(1)">次のステップ →</button>
+</div>
+
+  </div>
+</div>
+
+<script>
+const order = ['s1', 's2', 's3', 's32', 's4', 's5', 'ex1', 'ex2', 'ex3', 's6', 's7'];
+function selectStep(id){
+  order.forEach(o => {
+    document.getElementById('panel-'+o).style.display = (o===id) ? 'block' : 'none';
+    document.querySelector('[data-target="'+o+'"]').classList.toggle('active', o===id);
+  });
+  document.querySelectorAll('.panel').forEach(p=>{
+    if(p.id !== 'panel-'+id){
+      const v = p.querySelector('video');
+      if(v){ v.pause(); }
+    }
+  });
+  updateProgress(id);
+  window.scrollTo({top:0, behavior:'instant'});
+  try{ localStorage.setItem('course_step', id); }catch(e){}
+}
+function updateProgress(id){
+  const idx = order.indexOf(id);
+  document.querySelectorAll('.pos').forEach(el=> el.textContent = (idx+1)+' / '+order.length);
+  document.querySelectorAll('.btn-prev').forEach(el=> el.disabled = idx<=0);
+  document.querySelectorAll('.btn-next').forEach(el=> el.disabled = idx>=order.length-1);
+}
+function go(delta){
+  const current = order.find(o => document.getElementById('panel-'+o).style.display !== 'none');
+  const idx = order.indexOf(current);
+  const next = order[idx+delta];
+  if(next) selectStep(next);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  let start = order[0];
+  try{
+    const saved = localStorage.getItem('course_step');
+    if(saved && order.includes(saved)) start = saved;
+  }catch(e){}
+  selectStep(start);
+});
+</script>
+
+</body>
+</html>
