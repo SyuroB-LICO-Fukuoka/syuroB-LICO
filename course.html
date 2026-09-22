@@ -114,6 +114,10 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
           <span class="nav-num">11</span>
           <span class="nav-text"><span class="nav-label">STEP 7</span><span class="nav-title">動画の書き出し・プロマネ</span></span>
         </button>
+<button class="nav-item" data-target="bonus" onclick="selectStep('bonus')">
+          <span class="nav-num">🎁</span>
+          <span class="nav-text"><span class="nav-label">BONUS</span><span class="nav-title">プレゼント特典</span></span>
+        </button>
   </div>
   <div class="main">
     
@@ -337,8 +341,29 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <tr><td>保存先</td><td>動画編集 → 動画編集講座 → 書き出し</td></tr>
 <tr><td>プリセット</td><td>高品質1080p HD</td></tr></table>
     </div>
-    
-    
+
+
+    <div class="panel" id="panel-bonus" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">BONUS</span>
+        <h2>プレゼント特典</h2>
+        <p class="lead">講座を最後まで見てくれた方への特典です。すべて無料でダウンロード・閲覧できます。</p>
+      </div>
+      <ol class="steps">
+        <li>🎁 バズ動画を出すためにやることテンプレ<br><a href="https://drive.google.com/file/d/106OMOolENZHtWJ_hHILVgDAkJdizn3DE/view?usp=drive_link" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 バズる台本を作るChatGPT指示書<br><a href="https://drive.google.com/file/d/1Jzym7FknplGaIvDYW67OBvqVZ1C_MJtI/view?usp=drive_link" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 自分を知る～自己分析シート～<br><span style="color:var(--ink-soft);">準備中（リンク追加予定）</span></li>
+        <li>🎁 企画制作用テンプレ<br><a href="https://docs.google.com/spreadsheets/d/1dec7JXScTMjeJosRjNc0YPPJFDox6JQSjBEH7ARLyL8/edit?gid=0#gid=0" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 トンマナのまとめ方テンプレ<br><a href="https://docs.google.com/spreadsheets/d/1rs2s2YjhKpIrzuHj_fK6RBuJeuZ6G-DyhhneeYoXybQ/edit?gid=197051019#gid=197051019" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 企業案件を受けるときの返信テンプレ<br><a href="https://drive.google.com/file/d/1rZn3ls8FqiP_tw_S9lYqiNN8-FWDYDK3/view?usp=drive_link" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 YouTube運用に使えるサイト一覧<br><a href="https://drive.google.com/file/d/1wX3pmQhJhRTDF88XOaLeV_zB__D9SVsW/view?usp=drive_link" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 マスターしたら時短になるAIツール一覧<br><a href="https://drive.google.com/file/d/1LXh3FGn6FD8c-4l5nihaGybhkTIwKGRT/view?usp=drive_link" target="_blank" rel="noopener">ファイルを開く →</a></li>
+        <li>🎁 その他便利ツール<br><a href="https://drive.google.com/file/d/1tZppN0HR0QS1btpHzk9RC18uzYTFQ9Hl/view?usp=drive_link" target="_blank" rel="noopener">ファイルを開く →</a></li>
+      </ol>
+      <div class="callout warn"><strong>共有設定を確認中</strong><br>一部のファイルは現在オーナー限定公開のため、「リンクを知っている全員が閲覧可」への変更をお願いしています。設定完了後にリンクが開けるようになります。</div>
+    </div>
+
+
 <div class="progress">
   <button class="btn-prev" onclick="go(-1)">← 前のステップ</button>
   <span class="pos"></span>
@@ -349,7 +374,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 </div>
 
 <script>
-const order = ['s1', 's2', 's3', 's32', 's4', 's5', 'ex1', 'ex2', 'ex3', 's6', 's7'];
+const order = ['s1', 's2', 's3', 's32', 's4', 's5', 'ex1', 'ex2', 'ex3', 's6', 's7', 'bonus'];
 function selectStep(id){
   order.forEach(o => {
     document.getElementById('panel-'+o).style.display = (o===id) ? 'block' : 'none';
