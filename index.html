@@ -242,9 +242,16 @@
   .section-head { margin-bottom: 56px; }
 
   /* ─── Interior ─── */
-  .interior-photo { border-radius: 8px; overflow: hidden; max-width: 720px; margin: 0 auto; }
-  .interior-photo img { width: 100%; height: auto; display: block; }
-  .interior-caption { text-align: center; color: var(--gray-700); font-size: 14px; margin-top: 20px; }
+  .interior-photo {
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 380px;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto;
+    box-shadow: 0 12px 32px rgba(30,29,27,0.14);
+  }
+  .interior-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+  .interior-caption { text-align: center; color: var(--gray-700); font-size: 14px; margin-top: 24px; max-width: 420px; margin-left: auto; margin-right: auto; }
 
   /* ─── About ─── */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
