@@ -41,25 +41,10 @@
 
   .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
-  /* ─── DRAFT BANNER ─── */
-  .draft-banner {
-    background: #FFF3CD;
-    border-bottom: 2px dashed #F0B429;
-    padding: 8px 24px;
-    font-size: 12px;
-    color: #7A5C00;
-    text-align: center;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 200;
-  }
-
   /* ─── Header ─── */
   #header {
     position: fixed;
-    top: 36px; left: 0; right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 100;
     background: rgba(255,255,255,0.96);
     backdrop-filter: blur(8px);
@@ -122,7 +107,7 @@
     background: var(--off-white);
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 64px;
   }
 
   .hero-inner {
@@ -550,8 +535,6 @@
 
   /* ─── Responsive ─── */
   @media (max-width: 768px) {
-    .draft-banner { font-size: 10px; padding: 6px 16px; }
-    #header { top: 30px; }
     nav { display: none; }
     nav.open { display: flex; flex-direction: column; position: fixed; top: 94px; left: 0; right: 0; background: var(--white); padding: 20px 24px; gap: 16px; border-bottom: 1px solid var(--gray-300); z-index: 99; }
     .hamburger { display: flex; }
@@ -574,9 +557,6 @@
 </style>
 </head>
 <body>
-
-<!-- ドラフトバナー（公開時に削除） -->
-<div class="draft-banner">⚠️ DRAFT — 社内確認用。公開前に削除すること。</div>
 
 <!-- ─── Header ─── -->
 <header id="header">
@@ -735,15 +715,15 @@
           <tr><th>営業日</th><td>月〜金曜（祝日除く）9:00〜18:00</td></tr>
           <tr><th>利用時間</th><td>10:00〜15:00</td></tr>
           <tr><th>在宅勤務</th><td>ご希望の方はまずはご相談ください</td></tr>
-          <tr><th>開設予定</th><td class="tbd">準備中</td></tr>
-          <tr><th>電話</th><td class="tbd">000-0000-0000（準備中）</td></tr>
+          <tr><th>開設予定</th><td>2026年11月1日</td></tr>
+          <tr><th>電話</th><td class="tbd">準備中（現在はLINEにてお問い合わせください）</td></tr>
           <tr><th>利用料</th><td>所得に応じた自己負担あり</td></tr>
         </table>
       </div>
       <div class="service-box">
         <h3 class="service-box-title"><span>📝</span> 利用開始の流れ</h3>
         <ul class="service-list">
-          <li>LINEまたはお電話でお問い合わせ</li>
+          <li>LINEでお問い合わせ</li>
           <li>見学・個別相談（無料）</li>
           <li>体験利用（必要であれば体験もあり）</li>
           <li>受給者証の取得（お手伝いします）</li>
@@ -962,7 +942,7 @@
         </div>
         <div class="contact-info-item">
           <p class="contact-info-label">電話番号</p>
-          <p class="contact-info-value tbd">000-0000-0000<br>（準備中）</p>
+          <p class="contact-info-value tbd">準備中<br>（現在はLINEにてお問い合わせください）</p>
         </div>
         <div class="contact-info-item">
           <p class="contact-info-label">運営法人</p>
