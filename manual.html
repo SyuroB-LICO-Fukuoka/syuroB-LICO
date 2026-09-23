@@ -1,4 +1,31 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+.app{display:flex;min-height:100vh;}
+.sidebar{width:280px;flex:none;background:var(--teal-dark);color:#fff;padding:24px 0;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.brand{padding:0 22px 20px;font-size:15px;font-weight:800;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.15);margin-bottom:10px;}
+.brand span{display:block;font-size:11px;font-weight:500;opacity:.7;margin-top:4px;letter-spacing:.08em;}
+.quicklinks{padding:0 22px 16px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid rgba(255,255,255,.15);margin-bottom:6px;}
+.quicklink{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;padding:9px 12px;border-radius:8px;cursor:pointer;font-family:inherit;width:100%;box-sizing:border-box;}
+.quicklink:hover{background:rgba(255,255,255,.16);}
+.nav-group-label{padding:16px 22px 6px;font-size:10.5px;font-weight:700;letter-spacing:.1em;opacity:.55;text-transform:uppercase;}
+.nav-item{display:flex;align-items:center;gap:12px;width:100%;background:none;border:none;color:#fff;text-align:left;padding:12px 22px;cursor:pointer;font-family:inherit;opacity:.82;}
+.nav-item:hover{background:rgba(255,255,255,.08);opacity:1;}
+.nav-item.active{background:rgba(255,255,255,.16);opacity:1;border-right:3px solid #fff;}
+.nav-num{font-size:11px;font-variant-numeric:tabular-nums;opacity:.6;flex:none;width:20px;}
+.nav-text{display:flex;flex-direction:column;}
+.nav-label{font-size:10px;letter-spacing:.1em;opacity:.65;}
+.nav-title{font-size:13.5px;font-weight:600;}
+.main-wrap{flex:1;min-width:0;}
+section.step{display:none;padding:52px 0 !important;}
+section.step.active-panel{display:block;}
+@media (max-width:800px){
+  .app{flex-direction:column;}
+  .sidebar{width:100%;height:auto;position:relative;overflow-x:auto;white-space:nowrap;padding:14px 0;}
+  .brand{display:none;}
+  .quicklinks{display:none;}
+  .nav-group-label{display:none;}
+  .nav-item{display:inline-flex;padding:8px 14px;}
+}
+</style></head><body>
 <title>動画編集講座ガイド</title>
 
 <style>
@@ -66,38 +93,65 @@ footer.done{text-align:center;padding:60px 20px;color:var(--ink-soft);font-size:
 }
 </style>
 
-<div class="cover">
-  <div class="cover-inner">
-    <p class="eyebrow">Practical Editing Guide · 画像付き改訂版</p>
-    <h1>動画編集講座 / Premiere Pro</h1>
-    <p class="sub">初心者向け・実務で参照できる操作マニュアル。準備から編集、書き出しまでを、実際の講座動画から切り出したスクリーンショット付きで解説します。</p>
-    <div class="badge-row">
-      <span class="badge">全11本の講座動画から画像化</span>
-      <span class="badge">macOS / Premiere Pro</span>
-      <span class="badge">STEP1〜7 + 番外編3本</span>
+<div class="app">
+  <div class="sidebar">
+    <div class="brand">動画編集講座ガイド<span>テキスト版</span></div>
+    <div class="quicklinks">
+      <a class="quicklink" href="course.html" onclick="if(document.referrer){history.back();return false;}">▶ 前のページに戻る</a>
+      <a class="quicklink" href="https://syurob-lico-fukuoka.github.io/ayumi-lp/marketing_manual.html">📈 マーケ講座へ</a>
     </div>
-    <a href="course.html" onclick="if(document.referrer){history.back();return false;}" style="display:inline-block;margin-top:24px;padding:10px 18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:8px;color:#fff;text-decoration:none;font-size:13px;">▶ 前のページに戻る</a>
+    <div class="nav-group-label">動画編集講座</div>
+<button class="nav-item" data-target="s1" onclick="selectStep('s1')">
+          <span class="nav-num">01</span>
+          <span class="nav-text"><span class="nav-label">STEP 1</span><span class="nav-title">フォルダの作成</span></span>
+        </button>
+<button class="nav-item" data-target="s2" onclick="selectStep('s2')">
+          <span class="nav-num">02</span>
+          <span class="nav-text"><span class="nav-label">STEP 2</span><span class="nav-title">プロジェクトの作成</span></span>
+        </button>
+<button class="nav-item" data-target="s3" onclick="selectStep('s3')">
+          <span class="nav-num">03</span>
+          <span class="nav-text"><span class="nav-label">STEP 3</span><span class="nav-title">作業環境の統一</span></span>
+        </button>
+<button class="nav-item" data-target="s32" onclick="selectStep('s32')">
+          <span class="nav-num">04</span>
+          <span class="nav-text"><span class="nav-label">STEP 3-2</span><span class="nav-title">ショートカットキーの設定</span></span>
+        </button>
+<button class="nav-item" data-target="s4" onclick="selectStep('s4')">
+          <span class="nav-num">05</span>
+          <span class="nav-text"><span class="nav-label">STEP 4</span><span class="nav-title">素材の調節・カット</span></span>
+        </button>
+<button class="nav-item" data-target="s5" onclick="selectStep('s5')">
+          <span class="nav-num">06</span>
+          <span class="nav-text"><span class="nav-label">STEP 5</span><span class="nav-title">テロップ</span></span>
+        </button>
+<button class="nav-item" data-target="ex1" onclick="selectStep('ex1')">
+          <span class="nav-num">07</span>
+          <span class="nav-text"><span class="nav-label">EXTRA</span><span class="nav-title">テロップデザイン</span></span>
+        </button>
+<button class="nav-item" data-target="ex2" onclick="selectStep('ex2')">
+          <span class="nav-num">08</span>
+          <span class="nav-text"><span class="nav-label">EXTRA</span><span class="nav-title">SE（効果音）</span></span>
+        </button>
+<button class="nav-item" data-target="ex3" onclick="selectStep('ex3')">
+          <span class="nav-num">09</span>
+          <span class="nav-text"><span class="nav-label">EXTRA</span><span class="nav-title">画像挿入など</span></span>
+        </button>
+<button class="nav-item" data-target="s6" onclick="selectStep('s6')">
+          <span class="nav-num">10</span>
+          <span class="nav-text"><span class="nav-label">STEP 6</span><span class="nav-title">BGM</span></span>
+        </button>
+<button class="nav-item" data-target="s7" onclick="selectStep('s7')">
+          <span class="nav-num">11</span>
+          <span class="nav-text"><span class="nav-label">STEP 7</span><span class="nav-title">動画の書き出し・プロマネ</span></span>
+        </button>
+<button class="nav-item" data-target="quick" onclick="selectStep('quick')">
+          <span class="nav-num">12</span>
+          <span class="nav-text"><span class="nav-label">REFERENCE</span><span class="nav-title">早見表</span></span>
+        </button>
   </div>
-</div>
-
+  <div class="main-wrap">
 <div class="container">
-<nav class="toc">
-  <h2>Contents</h2>
-  <ol>
-    <li><a href="#s1">STEP1 フォルダの作成</a></li>
-    <li><a href="#s2">STEP2 プロジェクトの作成</a></li>
-    <li><a href="#s3">STEP3 作業環境の統一</a></li>
-    <li><a href="#s32">STEP3-2 ショートカットキーの設定</a></li>
-    <li><a href="#s4">STEP4 素材の調節・カット</a></li>
-    <li><a href="#s5">STEP5 テロップ</a></li>
-    <li><a href="#ex1">番外編 テロップデザイン</a></li>
-    <li><a href="#ex2">番外編 SE（効果音）</a></li>
-    <li><a href="#ex3">番外編 画像挿入など</a></li>
-    <li><a href="#s6">STEP6 BGM</a></li>
-    <li><a href="#s7">STEP7 動画の書き出し・プロマネ</a></li>
-    <li><a href="#quick">早見表</a></li>
-  </ol>
-</nav>
 
 <section class="step" id="s1">
   <span class="step-label">STEP 1</span>
@@ -443,5 +497,27 @@ footer.done{text-align:center;padding:60px 20px;color:var(--ink-soft);font-size:
 
 <footer class="done">画像はすべて講座動画からの実画面キャプチャです。 · 動画編集講座 / Premiere Pro</footer>
 </div>
+  </div>
+</div>
 
+
+<script>
+const order = ['s1','s2','s3','s32','s4','s5','ex1','ex2','ex3','s6','s7','quick'];
+function selectStep(id){
+  order.forEach(o => {
+    document.getElementById(o).classList.toggle('active-panel', o===id);
+    document.querySelector('[data-target="'+o+'"]').classList.toggle('active', o===id);
+  });
+  window.scrollTo({top:0, behavior:'instant'});
+  try{ localStorage.setItem('manual_step', id); }catch(e){}
+}
+window.addEventListener('DOMContentLoaded', () => {
+  let start = order[0];
+  try{
+    const saved = localStorage.getItem('manual_step');
+    if(saved && order.includes(saved)) start = saved;
+  }catch(e){}
+  selectStep(start);
+});
+</script>
 </body></html>
