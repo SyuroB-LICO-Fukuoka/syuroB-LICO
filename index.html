@@ -425,6 +425,8 @@
     /* 写真ができたら <img> に差し替え */
   }
 
+  .staff-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center 30%; display: block; margin: 0 auto 16px; border: 3px solid var(--green-light); }
+
   .staff-role { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--green-dark); margin-bottom: 8px; }
   .staff-name { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--black); }
   .staff-desc { font-size: 13px; color: var(--gray-500); line-height: 1.9; }
@@ -788,15 +790,13 @@
     </div>
     <div class="staff-grid">
       <div class="staff-card">
-        <!-- 写真ができたら <img src="photo-ayumi.jpg"> に差し替え -->
-        <div class="staff-photo-placeholder">PHOTO</div>
+        <img class="staff-photo" src="photo-ayumi.jpg" alt="管理者 小西 あゆみ">
         <p class="staff-role">管理者 ／ 生活支援員</p>
         <h3 class="staff-name">小西 あゆみ</h3>
         <p class="staff-desc">利用者の方が安心して通えるよう、施設全体の運営と日々の支援を担当します。一人ひとりの「できた」を一緒に喜びたいと思っています。</p>
       </div>
       <div class="staff-card">
-        <!-- 写真ができたら <img src="photo-yosuke.jpg"> に差し替え -->
-        <div class="staff-photo-placeholder">PHOTO</div>
+        <img class="staff-photo" src="photo-yosuke.jpg" alt="サービス管理責任者 小西 洋輔">
         <p class="staff-role">サービス管理責任者</p>
         <h3 class="staff-name">小西 洋輔</h3>
         <p class="staff-desc">利用者の方ひとりひとりに合わせた個別支援計画を作成し、目標に向けた支援の全体をコーディネートします。</p>
