@@ -25,6 +25,12 @@ html,body{margin:0;height:100%;background:var(--ground);color:var(--ink);font-fa
 .nav-label{font-size:10px;letter-spacing:.1em;opacity:.65;}
 .nav-title{font-size:13.5px;font-weight:600;}
 
+.nav-group{margin:18px 22px 6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.25);font-size:12px;font-weight:800;letter-spacing:.06em;color:#fff;opacity:.9;line-height:1.5;}
+.nav-group small{display:block;font-weight:500;opacity:.75;margin-top:2px;letter-spacing:0;}
+.related{max-width:720px;margin:26px 0 8px;padding:16px 18px;background:#fff8e5;border-left:4px solid var(--amber);border-radius:0 10px 10px 0;font-size:13.5px;}
+.related b{display:block;margin-bottom:6px;color:#8a5a00;}
+.related a{display:block;color:var(--teal-dark);font-weight:700;text-decoration:none;padding:3px 0;cursor:pointer;}
+.related a:hover{text-decoration:underline;}
 .main{flex:1;min-width:0;padding:40px 48px 100px;}
 .panel-head{margin-bottom:20px;}
 .step-label{display:inline-block;background:var(--teal);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:12px;}
@@ -133,65 +139,66 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
           <span class="nav-num">11</span>
           <span class="nav-text"><span class="nav-label">STEP 7</span><span class="nav-title">動画の書き出し・プロマネ</span></span>
         </button>
+<div class="nav-group">細かい解説（つまずき解決）<small>1〜11の流れの中で困りやすい点を、1本ずつ解説。必要なところだけ見てください</small></div>
 <button class="nav-item" data-target="p1" onclick="selectStep('p1')">
           <span class="nav-num">12</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その1</span><span class="nav-title">調整レイヤーの使い方</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 1</span><span class="nav-title">調整レイヤーの使い方</span></span>
         </button>
 <button class="nav-item" data-target="p2" onclick="selectStep('p2')">
           <span class="nav-num">13</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その2</span><span class="nav-title">エフェクトの使い方</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 2</span><span class="nav-title">エフェクトの使い方</span></span>
         </button>
 <button class="nav-item" data-target="p3" onclick="selectStep('p3')">
           <span class="nav-num">14</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その3</span><span class="nav-title">テロップの色を一括変更</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 3</span><span class="nav-title">テロップの色を一括変更</span></span>
         </button>
 <button class="nav-item" data-target="p4" onclick="selectStep('p4')">
           <span class="nav-num">15</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その4</span><span class="nav-title">テロップの背景を一括変更</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 4</span><span class="nav-title">テロップの背景を一括変更</span></span>
         </button>
 <button class="nav-item" data-target="p5" onclick="selectStep('p5')">
           <span class="nav-num">16</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その5</span><span class="nav-title">AIでテロップを自動で入れる</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 5</span><span class="nav-title">AIでテロップを自動で入れる</span></span>
         </button>
 <button class="nav-item" data-target="p6" onclick="selectStep('p6')">
           <span class="nav-num">17</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その6</span><span class="nav-title">BGMを伸ばして使う</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 6</span><span class="nav-title">BGMを伸ばして使う</span></span>
         </button>
 <button class="nav-item" data-target="p7" onclick="selectStep('p7')">
           <span class="nav-num">18</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その7</span><span class="nav-title">全選択を最短で</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 7</span><span class="nav-title">全選択を最短で</span></span>
         </button>
 <button class="nav-item" data-target="p8" onclick="selectStep('p8')">
           <span class="nav-num">19</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その8</span><span class="nav-title">メディアオフラインの直し方</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 8</span><span class="nav-title">メディアオフラインの直し方</span></span>
         </button>
 <button class="nav-item" data-target="p9" onclick="selectStep('p9')">
           <span class="nav-num">20</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その9</span><span class="nav-title">再生のカクつきを直す</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 9</span><span class="nav-title">再生のカクつきを直す</span></span>
         </button>
 <button class="nav-item" data-target="p10" onclick="selectStep('p10')">
           <span class="nav-num">21</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その10</span><span class="nav-title">パネルが消えたときの直し方</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 10</span><span class="nav-title">パネルが消えたときの直し方</span></span>
         </button>
 <button class="nav-item" data-target="p11" onclick="selectStep('p11')">
           <span class="nav-num">22</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その11</span><span class="nav-title">音が出ないときの確認</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 11</span><span class="nav-title">音が出ないときの確認</span></span>
         </button>
 <button class="nav-item" data-target="p12" onclick="selectStep('p12')">
           <span class="nav-num">23</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その12</span><span class="nav-title">保存と自動保存で作業を守る</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 12</span><span class="nav-title">保存と自動保存で作業を守る</span></span>
         </button>
 <button class="nav-item" data-target="p13" onclick="selectStep('p13')">
           <span class="nav-num">24</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その13</span><span class="nav-title">映像の黒い帯を消す</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 13</span><span class="nav-title">映像の黒い帯を消す</span></span>
         </button>
 <button class="nav-item" data-target="p14" onclick="selectStep('p14')">
           <span class="nav-num">25</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その14</span><span class="nav-title">すき間・勝手に動く問題の直し方</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 14</span><span class="nav-title">すき間・勝手に動く問題の直し方</span></span>
         </button>
 <button class="nav-item" data-target="p15" onclick="selectStep('p15')">
           <span class="nav-num">26</span>
-          <span class="nav-text"><span class="nav-label">PREMIERE その15</span><span class="nav-title">書き出しの設定と失敗したときの対処</span></span>
+          <span class="nav-text"><span class="nav-label">細かい解説 15</span><span class="nav-title">書き出しの設定と失敗したときの対処</span></span>
         </button>
   </div>
   <div class="main">
@@ -210,6 +217,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>案件フォルダの中に「プロジェクト」「書き出し」「素材」の3つのフォルダを作成します。</li></ol>
       
       
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p8')">▶ 細かい解説 8｜メディアオフラインの直し方</a><a onclick="selectStep('p12')">▶ 細かい解説 12｜保存と自動保存で作業を守る</a></div>
     </div>
     
 
@@ -229,6 +237,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>画面が開いたら、右下の「スキップ」をクリックして次へ進みます。</li></ol>
       <div class="callout warn"><strong>注意｜プロジェクトや素材を削除しない</strong><br>Premiere ProはPC内のファイルを参照して編集します。編集中のプロジェクトや使用中の素材を削除しないよう注意してください。</div>
       
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p13')">▶ 細かい解説 13｜映像の黒い帯を消す</a><a onclick="selectStep('p9')">▶ 細かい解説 9｜再生のカクつきを直す</a></div>
     </div>
     
 
@@ -252,6 +261,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <tr><td>右上</td><td>エフェクトコントロール／エッセンシャルグラフィックス（プロパティ）／テキスト</td></tr>
 <tr><td>左下</td><td>ツール</td></tr>
 <tr><td>中央下</td><td>タイムライン</td></tr></table>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p10')">▶ 細かい解説 10｜パネルが消えたときの直し方</a><a onclick="selectStep('p9')">▶ 細かい解説 9｜再生のカクつきを直す</a></div>
     </div>
     
 
@@ -282,6 +292,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <tr><td>リップル削除</td><td>F</td></tr>
 <tr><td>トラック後方 / 前方選択ツール</td><td>Z / X</td></tr>
 <tr><td>右へシャトル</td><td>C</td></tr></table>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p7')">▶ 細かい解説 7｜全選択を最短で</a><a onclick="selectStep('p14')">▶ 細かい解説 14｜すき間・勝手に動く問題の直し方</a></div>
     </div>
     
 
@@ -301,6 +312,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>音声のカットができたら、動画素材も同様にインポート・配置・カットを行います。</li></ol>
       <div class="callout warn"><strong>注意｜耳と波形の両方で確認</strong><br>必ず音を聴きながら、音声波形も見てカットします。波形が盛り上がっている位置で切ると「プツッ」という破裂音が入ることがあります。</div>
       
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p14')">▶ 細かい解説 14｜すき間・勝手に動く問題の直し方</a><a onclick="selectStep('p7')">▶ 細かい解説 7｜全選択を最短で</a><a onclick="selectStep('p2')">▶ 細かい解説 2｜エフェクトの使い方</a><a onclick="selectStep('p1')">▶ 細かい解説 1｜調整レイヤーの使い方</a></div>
     </div>
     
 
@@ -324,6 +336,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <tr><td>フォントサイズ</td><td>90</td></tr>
 <tr><td>背景（長方形）の塗り</td><td>黒</td></tr>
 <tr><td>背景（長方形）の不透明度</td><td>90%</td></tr></table>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p5')">▶ 細かい解説 5｜AIでテロップを自動で入れる</a><a onclick="selectStep('p3')">▶ 細かい解説 3｜テロップの色を一括変更</a><a onclick="selectStep('p4')">▶ 細かい解説 4｜テロップの背景を一括変更</a></div>
     </div>
     
 
@@ -343,6 +356,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <tr><td>ストローク</td><td>テロップの縁</td></tr>
 <tr><td>シャドウ</td><td>テロップの影や光</td></tr>
 <tr><td>フォントサイズ</td><td>テロップの大きさ</td></tr></table>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p3')">▶ 細かい解説 3｜テロップの色を一括変更</a><a onclick="selectStep('p4')">▶ 細かい解説 4｜テロップの背景を一括変更</a><a onclick="selectStep('p7')">▶ 細かい解説 7｜全選択を最短で</a></div>
     </div>
     
 
@@ -360,6 +374,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>「振幅と圧縮」→「ダイナミック」→「リミッター」にチェックし、-15〜-20 dB程度に設定します。</li></ol>
       <div class="callout warn">素材を使う前に、利用規約・商用利用の可否・著作権上の問題がないかを確認してください。</div>
       
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p11')">▶ 細かい解説 11｜音が出ないときの確認</a></div>
     </div>
     
 
@@ -377,6 +392,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>「エフェクトコントロール」の「モーション」で「位置」と「スケール」を調整します。</li></ol>
       
       
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p1')">▶ 細かい解説 1｜調整レイヤーの使い方</a><a onclick="selectStep('p2')">▶ 細かい解説 2｜エフェクトの使い方</a></div>
     </div>
     
 
@@ -395,6 +411,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>動画の終わりに合わせて長さをカットし、終端をドラッグしてフェードアウトを設定します。</li></ol>
       <div class="callout info">最後は音を聴いて、BGMが自然に小さくなり動画と一緒に終わることを確認します。</div>
       
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p6')">▶ 細かい解説 6｜BGMを伸ばして使う</a><a onclick="selectStep('p11')">▶ 細かい解説 11｜音が出ないときの確認</a></div>
     </div>
     
 
@@ -415,6 +432,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
       <table class="settings"><tr><th>確認項目</th><th>講座での指定</th></tr><tr><td>ファイル名</td><td>末尾の .mp4 を残す</td></tr>
 <tr><td>保存先</td><td>動画編集 → 動画編集講座 → 書き出し</td></tr>
 <tr><td>プリセット</td><td>高品質1080p HD</td></tr></table>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p15')">▶ 細かい解説 15｜書き出しの設定と失敗したときの対処</a><a onclick="selectStep('p12')">▶ 細かい解説 12｜保存と自動保存で作業を守る</a></div>
     </div>
 
 
