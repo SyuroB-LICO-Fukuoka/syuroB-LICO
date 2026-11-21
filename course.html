@@ -139,7 +139,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
           <span class="nav-num">11</span>
           <span class="nav-text"><span class="nav-label">STEP 7</span><span class="nav-title">動画の書き出し・プロマネ</span></span>
         </button>
-<div class="nav-group">細かい解説（つまずき解決）<small>1〜11の流れの中で困りやすい点を、1本ずつ解説。必要なところだけ見てください</small></div>
+<div class="nav-group">細かい解説（つまずき解決・便利機能）<small>Premiere Pro 2027 対応。1〜11の流れの中で困りやすい点や、便利な機能を、1本ずつ解説</small></div>
 <button class="nav-item" data-target="p1" onclick="selectStep('p1')">
           <span class="nav-num">12</span>
           <span class="nav-text"><span class="nav-label">細かい解説 1</span><span class="nav-title">調整レイヤーの使い方</span></span>
@@ -200,6 +200,22 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
           <span class="nav-num">26</span>
           <span class="nav-text"><span class="nav-label">細かい解説 15</span><span class="nav-title">書き出しの設定と失敗したときの対処</span></span>
         </button>
+<button class="nav-item" data-target="p16" onclick="selectStep('p16')">
+          <span class="nav-num">27</span>
+          <span class="nav-text"><span class="nav-label">細かい解説 16</span><span class="nav-title">便利なエフェクト｜映像を整える</span></span>
+        </button>
+<button class="nav-item" data-target="p17" onclick="selectStep('p17')">
+          <span class="nav-num">28</span>
+          <span class="nav-text"><span class="nav-label">細かい解説 17</span><span class="nav-title">便利なエフェクト｜隠す・切り取る・加工する</span></span>
+        </button>
+<button class="nav-item" data-target="p18" onclick="selectStep('p18')">
+          <span class="nav-num">29</span>
+          <span class="nav-text"><span class="nav-label">細かい解説 18</span><span class="nav-title">便利な機能｜動き・つなぎ・音</span></span>
+        </button>
+<button class="nav-item" data-target="p19" onclick="selectStep('p19')">
+          <span class="nav-num">30</span>
+          <span class="nav-text"><span class="nav-label">細かい解説 19</span><span class="nav-title">2027年版で変わったところ</span></span>
+        </button>
   </div>
   <div class="main">
     
@@ -237,7 +253,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>画面が開いたら、右下の「スキップ」をクリックして次へ進みます。</li></ol>
       <div class="callout warn"><strong>注意｜プロジェクトや素材を削除しない</strong><br>Premiere ProはPC内のファイルを参照して編集します。編集中のプロジェクトや使用中の素材を削除しないよう注意してください。</div>
       
-          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p13')">▶ 細かい解説 13｜映像の黒い帯を消す</a><a onclick="selectStep('p9')">▶ 細かい解説 9｜再生のカクつきを直す</a></div>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p13')">▶ 細かい解説 13｜映像の黒い帯を消す</a><a onclick="selectStep('p9')">▶ 細かい解説 9｜再生のカクつきを直す</a><a onclick="selectStep('p19')">▶ 細かい解説 19｜2027年版で変わったところ</a></div>
     </div>
     
 
@@ -312,7 +328,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>音声のカットができたら、動画素材も同様にインポート・配置・カットを行います。</li></ol>
       <div class="callout warn"><strong>注意｜耳と波形の両方で確認</strong><br>必ず音を聴きながら、音声波形も見てカットします。波形が盛り上がっている位置で切ると「プツッ」という破裂音が入ることがあります。</div>
       
-          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p14')">▶ 細かい解説 14｜すき間・勝手に動く問題の直し方</a><a onclick="selectStep('p7')">▶ 細かい解説 7｜全選択を最短で</a><a onclick="selectStep('p2')">▶ 細かい解説 2｜エフェクトの使い方</a><a onclick="selectStep('p1')">▶ 細かい解説 1｜調整レイヤーの使い方</a></div>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p14')">▶ 細かい解説 14｜すき間・勝手に動く問題の直し方</a><a onclick="selectStep('p7')">▶ 細かい解説 7｜全選択を最短で</a><a onclick="selectStep('p2')">▶ 細かい解説 2｜エフェクトの使い方</a><a onclick="selectStep('p1')">▶ 細かい解説 1｜調整レイヤーの使い方</a><a onclick="selectStep('p16')">▶ 細かい解説 16｜便利なエフェクト｜映像を整える</a><a onclick="selectStep('p17')">▶ 細かい解説 17｜便利なエフェクト｜隠す・切り取る・加工する</a><a onclick="selectStep('p18')">▶ 細かい解説 18｜便利な機能｜動き・つなぎ・音</a></div>
     </div>
     
 
@@ -336,7 +352,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <tr><td>フォントサイズ</td><td>90</td></tr>
 <tr><td>背景（長方形）の塗り</td><td>黒</td></tr>
 <tr><td>背景（長方形）の不透明度</td><td>90%</td></tr></table>
-          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p5')">▶ 細かい解説 5｜AIでテロップを自動で入れる</a><a onclick="selectStep('p3')">▶ 細かい解説 3｜テロップの色を一括変更</a><a onclick="selectStep('p4')">▶ 細かい解説 4｜テロップの背景を一括変更</a></div>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p5')">▶ 細かい解説 5｜AIでテロップを自動で入れる</a><a onclick="selectStep('p3')">▶ 細かい解説 3｜テロップの色を一括変更</a><a onclick="selectStep('p4')">▶ 細かい解説 4｜テロップの背景を一括変更</a><a onclick="selectStep('p19')">▶ 細かい解説 19｜2027年版で変わったところ</a></div>
     </div>
     
 
@@ -392,7 +408,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>「エフェクトコントロール」の「モーション」で「位置」と「スケール」を調整します。</li></ol>
       
       
-          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p1')">▶ 細かい解説 1｜調整レイヤーの使い方</a><a onclick="selectStep('p2')">▶ 細かい解説 2｜エフェクトの使い方</a></div>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p1')">▶ 細かい解説 1｜調整レイヤーの使い方</a><a onclick="selectStep('p2')">▶ 細かい解説 2｜エフェクトの使い方</a><a onclick="selectStep('p17')">▶ 細かい解説 17｜便利なエフェクト｜隠す・切り取る・加工する</a></div>
     </div>
     
 
@@ -411,7 +427,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 <li>動画の終わりに合わせて長さをカットし、終端をドラッグしてフェードアウトを設定します。</li></ol>
       <div class="callout info">最後は音を聴いて、BGMが自然に小さくなり動画と一緒に終わることを確認します。</div>
       
-          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p6')">▶ 細かい解説 6｜BGMを伸ばして使う</a><a onclick="selectStep('p11')">▶ 細かい解説 11｜音が出ないときの確認</a></div>
+          <div class="related"><b>この内容に関連する細かい解説</b><a onclick="selectStep('p6')">▶ 細かい解説 6｜BGMを伸ばして使う</a><a onclick="selectStep('p11')">▶ 細かい解説 11｜音が出ないときの確認</a><a onclick="selectStep('p18')">▶ 細かい解説 18｜便利な機能｜動き・つなぎ・音</a></div>
     </div>
     
 
@@ -445,7 +461,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">まとめて効かせる「透明なフタ」の作り方。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre01.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre01.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>プロジェクトパネル右下の「新規項目」→「調整レイヤー」→OK。</li><li>タイムラインで、効果をかけたいクリップの上のトラックにドラッグします。</li><li>端をドラッグして、かけたい範囲いっぱいに伸ばします。</li><li>調整レイヤーにエフェクトをかけると、下のすべてのクリップに効きます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>動画全体の色味をそろえたいとき／明るさバラバラの素材をなじませたいとき／あとから効果を足したり消したりしたいとき</div>
@@ -459,9 +475,9 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">エフェクトの探し方・かけ方・コピーの方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre02.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre02.mp4?v=2"></video>
       </div>
-      <ol class="steps"><li>ウィンドウ→エフェクトでパネルを開き、検索窓で探します。</li><li>使いたいエフェクトをクリップへドラッグします。</li><li>エフェクトコントロールで数値を調整し、ストップウォッチでキーフレームを打ちます。</li><li>エフェクト名を選んでコピー→別のクリップにペーストで使い回せます。</li><li>「fx」マークでオン／オフを切り替えます。</li></ol>
+      <ol class="steps"><li>ウィンドウ→エフェクトでパネルを開き、検索窓で探します。</li><li>使いたいエフェクトをクリップへドラッグします。</li><li>エフェクトコントロールで数値を調整し、ストップウォッチでキーフレームを打ちます。</li><li>エフェクト名を選んでコピー→別のクリップにペーストで使い回せます。</li><li>「fx」マークでオン／オフを切り替えます。</li><li>2027年版では、エフェクトパネルが新しくなり（動くプレビュー）、エフェクトはプロパティパネルにカードとして表示されます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>映像を見やすく整えたいとき／見せたくない部分をぼかしたいとき／動きをつけて目を引きたいとき</div>
       <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
     </div>
@@ -473,9 +489,9 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">テロップの色をまとめて直す方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre03.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre03.mp4?v=2"></video>
       </div>
-      <ol class="steps"><li>変えたいテロップをドラッグで全部囲んで選びます。</li><li>エッセンシャルグラフィックスの「塗り」の色を変えます。</li><li>スタイルを使う方法：見た目を整えて「スタイルを作成」→他のテロップに適用します。</li><li>フォントはそのままにしたいときは「フォントを使用せずにスタイルを適用」を選びます。</li></ol>
+      <ol class="steps"><li>囲まなくても選べます。Aキー（トラック選択ツール）で1つ目のテロップをクリックすると、右側が全部選べます（タイムライン全体はCtrl＋A）。</li><li>エッセンシャルグラフィックスの「塗り」の色を変えます。</li><li>スタイルを使う方法：見た目を整えて「スタイルを作成」→他のテロップに適用します。</li><li>フォントはそのままにしたいときは「フォントを使用せずにスタイルを適用」を選びます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>あとから色を変えたくなったとき／背景が変わって文字が読みにくくなったとき／全動画で色をそろえたいとき</div>
       <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
     </div>
@@ -487,7 +503,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">テロップの背景をまとめて整える方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre04.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre04.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>テロップをすべて選びます。</li><li>エッセンシャルグラフィックスの「外観」で「背景」にチェックを入れます。</li><li>色・不透明度・サイズ・角の丸みを決めます（半透明の黒が読みやすい）。</li><li>文字の一部だけを選んだ状態だと背景は変わりません。クリップ全体を選んでから直します。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>明るい映像で白文字が読みにくいとき／映像がごちゃごちゃで文字が埋もれるとき／スマホの小さい画面で見る人が多いとき</div>
@@ -501,7 +517,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">文字起こしからキャプション（テロップ）を作る方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre05.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre05.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>ウィンドウ→テキストでパネルを開き、「文字起こし」タブへ。</li><li>「シーケンスを文字起こし」→言語を日本語にして開始します。</li><li>出てきた文字を確認し、間違い（人名・専門用語）を直します。</li><li>「キャプションを作成」で1行の最大文字数（15文字前後）と行数を決めて作成します。</li><li>見た目はまとめて変更できます。自由に編集したいときはグラフィックへの変換機能を使います。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>話が長い動画で手打ちが大変なとき／解説・講座など話が中心の動画／字幕を他の言語に翻訳したいとき</div>
@@ -515,7 +531,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">短いBGMを動画の長さに合わせる方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre06.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre06.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>BGMをコピーして続けて並べます（Altキー（Macはoption）を押しながらドラッグ）。</li><li>つなぎ目にクロスフェードを入れます。</li><li>または、エッセンシャルサウンドで「ミュージック」を選び、リミックスで動画の長さを入力します。</li><li>最後にフェードアウトを入れて自然に終わらせます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>長い動画でBGM素材が足りないとき／短い曲を最後まで流したいとき／動画の長さをあとから変えても合わせ直したいとき</div>
@@ -529,9 +545,9 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">タイムラインの全選択のショートカットと、テロップだけを選ぶ方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre07.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre07.mp4?v=2"></video>
       </div>
-      <ol class="steps"><li>タイムラインを1回クリックして、Ctrl＋A（Macは⌘＋A）。</li><li>テロップだけ選ぶ：Aキー（トラック選択ツール）＋Shiftを押しながら1つ目をクリック。</li><li>選びたくないトラックの鍵（ロック）を押してからCtrl＋A。</li><li>選択解除はCtrl＋Shift＋A。</li></ol>
+      <ol class="steps"><li>タイムラインを1回クリックして、Ctrl＋A（Macは⌘＋A）。</li><li>テロップだけ選ぶ：Aキー（トラック選択ツール）＋Shiftを押しながら1つ目をクリック。</li><li>選びたくないトラックの鍵（ロック）を押してからCtrl＋A。</li><li>選択解除はCtrl＋Shift＋A。</li><li>もう1つ便利な方法：テロップに同じ色のラベルをつけておき、1つ右クリック→「ラベル」→「ラベルグループを選択」で、同じ色が全部選べます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>テロップの色・背景を一括で変えたいとき／クリップをまとめて動かす・消すとき／音量やエフェクトをまとめて整えるとき</div>
       <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
     </div>
@@ -543,7 +559,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">素材が赤くなって映らないときの直し方。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre08.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre08.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>原因：素材のファイルを移動・名前変更して、場所を見失った状態です。</li><li>赤くなった素材を右クリック→「メディアをリンク」。</li><li>開いた画面で素材を探して選び、OKを押します。</li><li>予防：素材を1つのフォルダにまとめ、作業中に動かさない。外付けドライブはつないだままにします。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>開いたら画面が赤くなる／昨日まで映っていた素材が見られない／フォルダを動かしたら動画が壊れた</div>
@@ -557,7 +573,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">プレビューが重いときの対処。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre09.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre09.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>プレビュー画面の「再生解像度」を1/2や1/4に下げます。</li><li>それでも重いときは「プロキシ」を使います（軽い編集用のコピー）。</li><li>読み込み時に「プロキシを作成」にチェックし、プロキシ切り替えボタンをオンにします。</li><li>書き出しは元の画質で行われます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>再生するとカクカクする／動かすたびに固まる／音と映像がずれる</div>
@@ -571,7 +587,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">パネルの配置を元に戻す方法。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre10.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre10.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>ウィンドウ→ワークスペースを開きます。</li><li>「保存したレイアウトにリセット」を押すと元の配置に戻ります。</li><li>1つだけ出したいときは、ウィンドウのメニューから名前を選びます（チェックなし＝閉じている）。</li><li>使いやすい配置ができたら、新しいワークスペースとして保存します。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>タイムラインが消えた／配置がぐちゃぐちゃになった／見慣れない画面になっている</div>
@@ -585,7 +601,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">音が出ないときのチェックの順番。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre11.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre11.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>トラックの「M」が光っていないか（ミュート）。</li><li>他のトラックに「S」（ソロ）が点いていないか。</li><li>環境設定→オーディオハードウェアで、出力先が使っているスピーカー／ヘッドホンか確認します。</li><li>パソコン本体の音量・ミュート、ヘッドホン／Bluetoothの接続も確認します。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>再生しても音が聞こえない／メーターは動くのに音が出ない／一部のクリップだけ音が出ない</div>
@@ -599,7 +615,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">落ちても大丈夫にする保存の習慣。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre12.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre12.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>こまめな保存：Ctrl＋S（Macは⌘＋S）。</li><li>環境設定→自動保存で、保存の間隔と残す数を決めます。</li><li>自動保存のファイルは、プロジェクトの近くの「自動保存」フォルダに入ります。落ちたときはここから開きます。</li><li>大きく変える前に「名前を付けて保存」で日付つきの控えを残します。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>作業中にアプリが落ちた／保存したつもりができていなかった／前の状態に戻りたくなった</div>
@@ -613,7 +629,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">黒い帯が出るとき（サイズ違い）の直し方。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre13.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre13.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>原因：シーケンスのサイズと素材のサイズが違うことです。</li><li>クリップを右クリック→「フレームサイズに合わせる」。</li><li>最初から合わせるには、素材を「新規項目」アイコンにドラッグして「クリップから新規シーケンス」を作ります。</li><li>縦動画はシーケンス設定でフレームサイズを横1080×縦1920にします。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>縦動画なのに上下に黒い帯／素材と動画のサイズが合わない／映像がはみ出す・小さい</div>
@@ -627,7 +643,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">クリップのすき間と、勝手に動く動きへの対処。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre14.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre14.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>すき間を右クリック→「リップル削除」で、後ろが自動で詰まります。</li><li>映像と音が一緒に動くのはリンクのため。選んでCtrl＋L（Macは⌘＋L）でリンクを外す／つなぐ。</li><li>置けない・くっつきすぎるのはスナップの働き。Sキーでオン／オフします。</li><li>Shift＋Deleteで、削除と同時にすき間も詰められます。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>カットしたらすき間ができた／映像を動かすと音もついてくる／クリップが思った場所に置けない</div>
@@ -641,10 +657,67 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
         <p class="lead">書き出しの基本設定と、失敗したときの確認。</p>
       </div>
       <div class="video-wrap">
-        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre15.mp4"></video>
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre15.mp4?v=2"></video>
       </div>
       <ol class="steps"><li>Ctrl＋M（Macは⌘＋M）で書き出し画面を開きます（先にタイムラインをクリック）。</li><li>形式はH.264、プリセットはYouTubeのフルHDを選び、出力名と保存場所を決めて「書き出し」。</li><li>失敗したときは、書き出し先をパソコン内のフォルダに変えてみます（外付けが原因のことがあります）。</li><li>空き容量を確認し、それでもだめならプロジェクト設定のレンダラーを「ソフトウェアのみ」に変えてみます。</li><li>本番の前に短い区間だけ書き出して、画質と音を確かめると安心です。</li></ol>
       <div class="callout info"><strong>こんなときに便利</strong><br>書き出しが途中で止まる／書き出した動画が重すぎる／YouTubeに上げたら画質が悪い</div>
+      <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
+    </div>
+
+
+    <div class="panel" id="panel-p16" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">PREMIERE 編集講座　その16</span>
+        <h2>便利なエフェクト｜映像を整える</h2>
+        <p class="lead">色・ブラー・シャープ・ビネット・白黒。普段よく使う、映像を整えるエフェクト。</p>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre16.mp4?v=2"></video>
+      </div>
+      <ol class="steps"><li>カラー調整：露光量・コントラスト・色温度（2027年版は新しい「カラー」タブ。以前はLumetriカラー）。</li><li>ブラー（ガウス）：背景をぼかして文字を目立たせる／見せたくない部分に。</li><li>アンシャープマスク：少しピンボケした映像をくっきりさせます（かけすぎ注意）。</li><li>ビネット：画面の四隅を暗くして、視線を中央に集めます。</li><li>白黒：回想シーンや雰囲気を変えたいときに。</li></ol>
+      <div class="callout info"><strong>こんなときに便利</strong><br>暗い映像を明るくしたいとき／背景をぼかして主役を目立たせたいとき／雰囲気を変えたいとき</div>
+      <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
+    </div>
+
+    <div class="panel" id="panel-p17" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">PREMIERE 編集講座　その17</span>
+        <h2>便利なエフェクト｜隠す・切り取る・加工する</h2>
+        <p class="lead">モザイク・マスク・クロップ・Ultra キー・ワープスタビライザー。</p>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre17.mp4?v=2"></video>
+      </div>
+      <ol class="steps"><li>モザイク：名前や顔など見せたくない部分を隠します。</li><li>マスク：エフェクトをかける範囲を決めます。動く物には「マスクの追跡」。</li><li>クロップ：上下左右を切り取り、映り込んだ余計なものを消します。</li><li>Ultra キー：緑や青の背景を透明にして、好きな映像に差し替えます。</li><li>ワープスタビライザー：手ブレを自動補正します（解析に時間がかかります）。</li></ol>
+      <div class="callout info"><strong>こんなときに便利</strong><br>名前や顔を隠したいとき／余計なものが映り込んだとき／背景を差し替えたいとき／手ブレを直したいとき</div>
+      <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
+    </div>
+
+    <div class="panel" id="panel-p18" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">PREMIERE 編集講座　その18</span>
+        <h2>便利な機能｜動き・つなぎ・音</h2>
+        <p class="lead">ズーム・クロスディゾルブ・暗転・速度変更・ノイズ低減・自動ダッキング。</p>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre18.mp4?v=2"></video>
+      </div>
+      <ol class="steps"><li>拡大：エフェクトコントロールの「スケール」にキーフレームを打って、ゆっくりズーム。</li><li>クロスディゾルブ：ビデオトランジションから、つなぎ目にドラッグして場面をふわっと切り替えます。</li><li>ディップトゥブラック：動画の始まりと終わりを暗転させます。</li><li>速度・デュレーション：クリップを右クリック（Ctrl＋R）。早送り・スロー（2027年版は画面が新しくなっています）。</li><li>ノイズ低減：エッセンシャルサウンドで「会話」を選び、ノイズを低減にチェック。</li><li>自動ダッキング：エッセンシャルサウンドで「ミュージック」を選び、声のときだけBGMを小さくします。</li></ol>
+      <div class="callout info"><strong>こんなときに便利</strong><br>視線を引きつけたいとき／場面を自然に切り替えたいとき／雑音を減らしたいとき／声を聞き取りやすくしたいとき</div>
+      <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
+    </div>
+
+    <div class="panel" id="panel-p19" style="display:none">
+      <div class="panel-head">
+        <span class="step-label">PREMIERE 編集講座　その19</span>
+        <h2>2027年版で変わったところ</h2>
+        <p class="lead">Premiere Pro 2027（バージョン27）の、今までと違う点。</p>
+      </div>
+      <div class="video-wrap">
+        <video controls preload="metadata" playsinline src="https://pub-76738c1132324d269485ce0dc383cca0.r2.dev/pre19.mp4?v=2"></video>
+      </div>
+      <ol class="steps"><li>色の調整は、編集タブの隣にある新しい「カラー」タブへ。以前のLumetriカラーで直した色は、エフェクトコントロールで編集できます。</li><li>エフェクトパネルが新しくなり、動くプレビューで選べます。</li><li>映像・音声のエフェクトやマスクは、プロパティパネルの中にカードとして表示されます。</li><li>速度・デュレーションの画面が作り直され、自動ダッキングも改善されました。</li><li>注意：2027年版で保存したプロジェクトは、一つ前のバージョンでは開けません。動作にはApple siliconのMacか、Windows 11が必要です。</li><li>AIアシスタントなどの生成の機能は、Adobeの生成クレジットを使います。</li></ol>
+      <div class="callout info"><strong>こんなときに便利</strong><br>これからアップデートする人／講座の画面と違って戸惑ったとき</div>
       <div class="callout">動画の画面は、わかりやすく作り直した図です。Premiere Proのバージョンによって、ボタンの名前が少し違うことがあります。</div>
     </div>
 
@@ -658,7 +731,7 @@ table.settings tr:nth-child(even) td{background:#fafcfc;}
 </div>
 
 <script>
-const order = ['s1', 's2', 's3', 's32', 's4', 's5', 'ex1', 'ex2', 'ex3', 's6', 's7', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15'];
+const order = ['s1', 's2', 's3', 's32', 's4', 's5', 'ex1', 'ex2', 'ex3', 's6', 's7', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15', 'p16', 'p17', 'p18', 'p19'];
 function selectStep(id){
   order.forEach(o => {
     document.getElementById('panel-'+o).style.display = (o===id) ? 'block' : 'none';
