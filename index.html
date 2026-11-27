@@ -96,6 +96,20 @@ nav#nav a.cta{margin-top:16px;border:2px solid var(--accent);background:var(--ac
 .target li::before{content:"";position:absolute;left:0;top:1.15em;width:7px;height:7px;background:var(--accent);border-radius:50%}
 .target-note{font-size:14px;color:var(--ink-soft);margin-top:12px}
 
+
+/* pet */
+.pet{border-top:1px solid var(--line)}
+.pet-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 8px}
+.pet-photos figure:first-child{grid-column:1/-1}
+.pet-photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pet-photos figcaption{font-size:13px;color:var(--ink-soft);margin-top:6px;line-height:1.6}
+.pet-steps{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.pet-steps li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:0 14px}
+.pet-steps li::before{content:"";width:7px;height:7px;background:var(--accent);border-radius:50%;margin-top:.95em}
+.pet-note{font-size:14px;color:var(--ink-soft);margin-top:14px}
+.donate{margin-top:32px;padding:20px;border:1px solid var(--accent)}
+.donate h3{font-size:17px;margin-bottom:6px}
+
 /* day */
 .day{list-style:none}
 .day li{padding:20px 0;border-top:1px solid var(--line);display:grid;gap:4px}
@@ -179,6 +193,12 @@ footer a{color:#EDE6D8}
   .hero-photo img{aspect-ratio:3/4;object-position:50% 50%}
   .hero h1{font-size:36px}
   .btns{flex-direction:row;flex-wrap:wrap}
+  .pet-photos{grid-template-columns:repeat(3,1fr);gap:16px}
+  .pet-photos figure:first-child{grid-column:auto}
+  .pet-photos img{aspect-ratio:1}
+  .pet-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;border-top:1px solid var(--line)}
+  .pet-steps li{border-bottom:1px solid var(--line)}
+  .pet-head{max-width:760px}
   .about{display:grid;grid-template-columns:380px 1fr;gap:80px;align-items:start}
   .about-photo img{aspect-ratio:4/5;object-position:50% 50%;margin:0}
   .things .thing{grid-template-columns:90px 1fr 300px;gap:0 36px;padding:44px 0}
@@ -212,6 +232,7 @@ footer a{color:#EDE6D8}
     <button id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">メニュー</button>
     <nav id="nav" aria-label="メインメニュー">
       <a href="#about">LICOのこと</a>
+      <a href="#pet">ペットのオリジナル商品</a>
       <a href="#things">できること</a>
       <a href="#day">1日の流れ</a>
       <a href="#staff">スタッフ</a>
@@ -242,6 +263,33 @@ footer a{color:#EDE6D8}
         <li>在宅勤務も相談できます</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section id="pet" class="pet" aria-labelledby="h-pet">
+  <div class="wrap">
+    <p class="eyebrow">ペットのオリジナル商品</p>
+    <div class="pet-head">
+      <h2 id="h-pet">メンバーがつくる、ペットのオリジナル商品</h2>
+      <p>LICOでは、ペットの写真でつくるスマホケースやメモリアルボードなど、オリジナル商品（ITTENMON／LICO PET original）を、利用者のメンバーが一点ずつ、心をこめてつくっています。</p>
+      <p>写真のデータを整えるところから、仕上げ、梱包まで。大切なペットの思い出に関わる品だからこそ、ひとつずつ、ていねいに向き合っています。</p>
+      <p>全国の動物病院やペットサロンなどに、オンラインショップのチラシを置いていただいています。</p>
+    </div>
+    <div class="pet-photos">
+      <figure><img src="img/pet-work-cats.jpg" alt="2匹の猫の写真とお名前をプリントした、透明なスマホケースの作品" width="900" height="675" loading="lazy"><figcaption>メンバーがつくった作品（スマホケース）</figcaption></figure>
+      <figure><img src="img/pet-work-chihuahua.jpg" alt="星柄の背景にチワワの写真とお名前を入れたスマホケースの作品" width="900" height="675" loading="lazy"><figcaption>メンバーがつくった作品（スマホケース）</figcaption></figure>
+      <figure><img src="img/pet-memorial.jpg" alt="犬の写真を入れた、透明なペットのメモリアルボードのイメージ" width="800" height="800" loading="lazy"><figcaption>ペットのメモリアルボード（商品イメージ）</figcaption></figure>
+    </div>
+    <ul class="pet-steps">
+      <li><span><b>写真のデータを整える</b><br><span style="font-size:15px;color:var(--ink-soft)">お客様の写真を、つくれる形に調整します。</span></span></li>
+      <li><span><b>仕上げる</b><br><span style="font-size:15px;color:var(--ink-soft)">できあがりを確かめながら、ひとつずつ仕上げます。</span></span></li>
+      <li><span><b>梱包する</b><br><span style="font-size:15px;color:var(--ink-soft)">ていねいに包んで、お届けします。</span></span></li>
+    </ul>
+    <div class="donate">
+      <h3>保護猫・保護犬への寄付</h3>
+      <p>売上の一部は、保護猫・保護犬の保護活動をしている団体に寄付します。</p>
+    </div>
+    <div class="btns"><a class="btn" href="https://syurob-lico-fukuoka.github.io/ittenmon/" target="_blank" rel="noopener">ITTENMONで商品を見る</a><a class="btn ghost" href="blog/pet-original-goods-b-type-fukuoka/">くわしくはブログで読む</a></div>
   </div>
 </section>
 
@@ -392,6 +440,7 @@ footer a{color:#EDE6D8}
     <p class="eyebrow">ブログ</p>
     <h2 id="h-blog">LICOのブログ</h2>
     <ul class="posts">
+      <li><a href="blog/pet-original-goods-b-type-fukuoka/">メンバーがつくるペットのオリジナル商品｜福岡市西区のB型LICO</a></li>
       <li><a href="blog/b-type-fukuoka-nishi-lico/">福岡市西区今宿の就労継続支援B型「LICO（リコ）」とは？</a></li>
       <li><a href="blog/video-editing-b-type-fukuoka/">B型事業所で動画編集｜未経験・パソコン初心者がYouTube編集を学べるLICO</a></li>
       <li><a href="blog/b-type-visit-trial-fukuoka/">LICOの見学・体験の流れと、よくある質問</a></li>
@@ -437,6 +486,7 @@ footer a{color:#EDE6D8}
     <p class="fc">就労継続支援B型　運営：株式会社かむらっど</p>
     <ul class="fn">
       <li><a href="#about">LICOのこと</a></li>
+      <li><a href="#pet">ペットのオリジナル商品</a></li>
       <li><a href="#things">できること</a></li>
       <li><a href="#day">1日の流れ</a></li>
       <li><a href="#staff">スタッフ</a></li>
