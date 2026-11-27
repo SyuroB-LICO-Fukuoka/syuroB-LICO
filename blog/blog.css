@@ -134,3 +134,4 @@ html, body { overflow-x: hidden; }
 .nap td a { word-break: break-all; }
 .post-card .thumb img { object-position: center 60%; }
 .tel-line a { white-space: nowrap; }
+figure.inline.wide { max-width: 100%; }
